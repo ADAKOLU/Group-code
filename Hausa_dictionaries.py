@@ -47,13 +47,35 @@ yoruba = {
     "sad": "ibanujẹ",
     "angry": "ibinu",   
 }
+igbo = {
+        "house": "ulo",
+        "money": "ego",
+        "food": "nri",
+        "water": "Mmiri",
+        "cloth": "akwa",
+        "hand": "aka",
+        "leg": "ukwu",
+        "head": "isi",
+        "heart": "obi",
+        "morning": "ututu",
+        "evening": "angasi",
+        "man": "nwoke",
+        "woman": "nwaanyi",
+        "child": "nwatakiri",
+        "hunger": "aguu",
+        "fire": "oku",
+        "story": "akuko",
+        "thanks you": "ekele",
+        "what's up": "kedu",
+}
 translation ={
     'hausa':hausa,
     'youruba': yoruba
+    'igbo': igbo
 }
-language = input("enter what language; (hausa): ")
+language = input("enter what language; (hausa / igbo): ")
 word = input("enter the english word you want to translate: ")
-language = input("Enter language (hausa / yoruba): ")
+language = input("Enter language (hausa / yoruba / igbo): ")
 word = input("Enter the English word to translate: ")
 if language in translation:
     lang = translation[language]
