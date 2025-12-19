@@ -68,24 +68,6 @@ igbo = {
         "thanks you": "ekele",
         "what's up": "kedu",
 }
-translation ={
-    'hausa':hausa,
-    'youruba': yoruba
-    'igbo': igbo
-}
-language = input("enter what language; (hausa / igbo): ")
-word = input("enter the english word you want to translate: ")
-language = input("Enter language (hausa / yoruba / igbo): ")
-word = input("Enter the English word to translate: ")
-if language in translation:
-    lang = translation[language]
-    if word in lang:
-        print("Translation:", lang[word])
-    else:
-        print("the word is not found")
-else:
-    print("the language is not found")
-        # English → Local Language dictionary
 eng_to_local = {
     "good morning": "ite",
     "good afternoon": "ndo iko",
@@ -108,29 +90,23 @@ eng_to_local = {
     "tongue": "redaar",
     "mouth": "kamma"
 }
+translation ={
+    'hausa':hausa,
+    'youruba': yoruba,
+    'igbo': igbo,
+    'eng_to_local':eng_to_local
+}
+language = input("enter what language; (hausa / igbo/yoruba/eng_to_local): ")
+word = input("enter the english word you want to translate: ")
 
-# Automatically create Local → English dictionary
-local_to_eng = {value: key for key, value in eng_to_local.items()}
-
-print("1. English → Local Language")
-print("2. Local Language → English")
-
-choice = input("Choose translation direction (1 or 2): ")
-
-word = input("Enter word or phrase: ").lower()
-
-if choice == "1":
-    if word in eng_to_local:
-        print("Translation:", eng_to_local[word])
+if language in translation:
+    lang = translation[language]
+    if word in lang:
+        print("Translation:", lang[word])
     else:
-        print("Sorry, translation not found.")
-
-elif choice == "2":
-    if word in local_to_eng:
-        print("Translation:", local_to_eng[word])
-    else:
-        print("Sorry, translation not found.")
-
+        print("the word is not found")
 else:
-    print("Invalid choice.")
+    print("the language is not found")
+        # English → Local Language dictionary
+
 
