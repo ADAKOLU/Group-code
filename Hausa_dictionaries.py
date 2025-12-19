@@ -85,3 +85,52 @@ if language in translation:
         print("the word is not found")
 else:
     print("the language is not found")
+        # English → Local Language dictionary
+eng_to_local = {
+    "good morning": "ite",
+    "good afternoon": "ndo iko",
+    "good evening": "mdo ididi",
+    "how are you?": "nke nadi",
+    "i love you": "avaduone",
+    "let us go": "velido",
+    "stand up": "titti",
+    "sit down": "tuwo",
+    "give me": "yinne",
+    "water": "bayin",
+    "plate": "ogbagala",
+    "spoon": "ekor",
+    "food": "kaji",
+    "mother": "ené",
+    "father": "edé",
+    "nose": "jol",
+    "hair": "kitulu",
+    "teeth": "reraar",
+    "tongue": "redaar",
+    "mouth": "kamma"
+}
+
+# Automatically create Local → English dictionary
+local_to_eng = {value: key for key, value in eng_to_local.items()}
+
+print("1. English → Local Language")
+print("2. Local Language → English")
+
+choice = input("Choose translation direction (1 or 2): ")
+
+word = input("Enter word or phrase: ").lower()
+
+if choice == "1":
+    if word in eng_to_local:
+        print("Translation:", eng_to_local[word])
+    else:
+        print("Sorry, translation not found.")
+
+elif choice == "2":
+    if word in local_to_eng:
+        print("Translation:", local_to_eng[word])
+    else:
+        print("Sorry, translation not found.")
+
+else:
+    print("Invalid choice.")
+
