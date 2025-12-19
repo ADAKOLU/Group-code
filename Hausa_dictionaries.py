@@ -90,13 +90,36 @@ eng_to_local = {
     "tongue": "redaar",
     "mouth": "kamma"
 }
+idoma = {
+        "cassava": "akpu",
+        "good": "oma",
+        "fire":  "oku",
+        "spirit": "mmuo",
+        "sit": "no",
+        "goodness": "oma",
+        "king": "eze",
+        "mother": "nne",
+        "father": "nna",
+        "children": "umu",
+        "land": "ala",
+        "medicine": "ogwu",
+        "money":"akwu",
+        "journey": "ije",
+        "time": "oge",
+        "house": "ulo",
+        "eye": "anya",
+        "ear": "nti",
+        "mouth": "onu",
+        "hand": "aka",
+}
 translation ={
     'hausa':hausa,
     'youruba': yoruba,
     'igbo': igbo,
     'eng_to_local':eng_to_local
+    'idoma': idoma
 }
-language = input("enter what language; (hausa / igbo/yoruba/eng_to_local): ")
+language = input("enter what language; (hausa / igbo/yoruba / eng_to_local / idoma): ")
 word = input("enter the english word you want to translate: ")
 
 if language in translation:
