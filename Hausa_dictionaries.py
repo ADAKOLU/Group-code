@@ -1,6 +1,6 @@
 import streamlit as st
 
-choice = st.selectbox('language','hausa','yoruba','idoma','eng_to_local','igbo')
+choice = st.selectbox('language',['hausa','yoruba','igbo','ufia','idoma'])
 
 hausa_dict = {
         "hello": "sannu",
@@ -21,7 +21,7 @@ hausa_dict = {
         "friend": "aboki",
         "love": "so",
         "work": "aiki",
-        "sleep": "barci"
+        "sleep": "barci",
         "eat": "ci"
 }
 igbo_dict = {
@@ -47,19 +47,19 @@ igbo_dict = {
 }
 yoruba_dict = {
        "woman":"obirin",
-        "sun":"oorun"
+        "sun":"oorun",
         "sleep":"sun",
         "father":"baba",
-        "joy":ayo",
+        "joy":"ayo",
         "anger":"ibinu",
         "eat":"je",
-        "Water":omi",
-        "work":ise",
+        "Water":"omi",
+        "work":"ise",
         "fire":"ina",
         "money":"owo",
 }
 def search_dictionary(word,dictionary):
-        return dictionary[word]
+        return dictionary.get(word,'word not found')
 if choice == 'hausa':
         dictionary = hausa_dict
         your_word = st.text_input('Enter your word')
