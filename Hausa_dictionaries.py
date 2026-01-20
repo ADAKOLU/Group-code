@@ -24,7 +24,7 @@ hausa_dict = {
         "sleep": "barci"
         "eat": "ci"
 }
-igbo = {
+igbo_dict = {
         "house": "ulo",
         "money": "ego",
         "food": "nri",
@@ -45,7 +45,7 @@ igbo = {
         "thanks_you": "ekele",
         "what's_up": "kedu",
 }
-youruba = {
+yoruba_dict = {
        "woman":"obirin",
         "sun":"oorun"
         "sleep":"sun",
@@ -68,8 +68,8 @@ if choice == 'igbo':
         dictionary = igbo_dict
         your_word = st.text_input('Enter your word')
         st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
-if choice == 'youruba':
-        dictionary = igbo_dict
+if choice == 'yoruba':
+        dictionary = yoruba_dict
         your_word = st.text_input('Enter your word')
         st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
 
