@@ -24,10 +24,35 @@ hausa_dict = {
         "sleep": "barci"
         "eat": "ci"
 }
+igbo = {
+        "house": "ulo",
+        "money": "ego",
+        "food": "nri",
+        "water": "Mmiri",
+        "cloth": "akwa",
+        "hand": "aka",
+        "leg": "ukwu",
+        "head": "isi",
+        "heart": "obi",
+        "morning": "ututu",
+        "evening": "angasi",
+        "man": "nwoke",
+        "woman": "nwaanyi",
+        "child": "nwatakiri",
+        "hunger": "aguu",
+        "fire": "oku",
+        "story": "akuko",
+        "thanks_you": "ekele",
+        "what's_up": "kedu",
+}
 def search_dictionary(word,dictionary):
         return dictionary[word]
 if choice == 'hausa':
         dictionary = hausa_dict
+        your_word = st.text_input('Enter your word')
+        st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
+if choice == 'igbo':
+        dictionary = igbo_dict
         your_word = st.text_input('Enter your word')
         st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
 
