@@ -45,6 +45,19 @@ igbo = {
         "thanks_you": "ekele",
         "what's_up": "kedu",
 }
+youruba = {
+       "woman":"obirin",
+        "sun":"oorun"
+        "sleep":"sun",
+        "father":"baba",
+        "joy":ayo",
+        "anger":"ibinu",
+        "eat":"je",
+        "Water":omi",
+        "work":ise",
+        "fire":"ina",
+        "money":"owo",
+}
 def search_dictionary(word,dictionary):
         return dictionary[word]
 if choice == 'hausa':
@@ -55,6 +68,11 @@ if choice == 'igbo':
         dictionary = igbo_dict
         your_word = st.text_input('Enter your word')
         st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
+if choice == 'youruba':
+        dictionary = igbo_dict
+        your_word = st.text_input('Enter your word')
+        st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
+
 
 
 
