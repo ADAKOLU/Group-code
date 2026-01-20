@@ -58,6 +58,21 @@ yoruba_dict = {
         "fire":"ina",
         "money":"owo",
 }
+  ufia_dict = {
+          "Good morning":"ite",
+          "Good afternoon":"Ndo Iko",
+          "Good evening":"Ndo Ididi",
+          "How are you doing?":"Icholo-be?",
+          "I love you":"Ava-gbudom",
+          "Give me":"Yinne",
+          "Water":"Bayin",
+          "Spoon":"Ekor",
+          "Mother":"ada",
+          "Teeth":"Reraar",
+          "Leg":"kotuwo",
+  }          
+          
+          
 def search_dictionary(word,dictionary):
         return dictionary.get(word,'word not found')
 if choice == 'hausa':
@@ -72,6 +87,11 @@ if choice == 'yoruba':
         dictionary = yoruba_dict
         your_word = st.text_input('Enter your word')
         st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
+if choice == 'ufia_dict'
+         dictionary = ufia_dict
+         your_word = st.text_input('Enter your word')
+         st.button('search', on_click = lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
+        
 
 
 
