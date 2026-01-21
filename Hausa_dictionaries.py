@@ -58,6 +58,28 @@ yoruba_dict = {
         "fire":"ina",
         "money":"owo",
 }
+idoma_dict = {
+        "cassava": "akpu",
+        "good": "oma",
+        "fire":  "oku",
+        "spirit": "mmuo",
+        "sit": "no",
+        "goodness": "oma",
+        "king": "eze",
+        "mother": "nne",
+        "father": "nna",
+        "children": "umu",
+        "land": "ala",
+        "medicine": "ogwu",
+        "money":"akwu",
+        "journey": "ije",
+        "time": "oge",
+        "house": "ulo",
+        "eye": "anya",
+        "ear": "nti",
+        "mouth": "onu",
+        "hand": "aka",
+}
   ufia_dict = {
           "Good morning":"ite",
           "Good afternoon":"Ndo Iko",
@@ -89,6 +111,10 @@ if choice == 'yoruba':
         st.button('search', on_click=lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
 if choice == 'ufia_dict'
          dictionary = ufia_dict
+         your_word = st.text_input('Enter your word')
+         st.button('search', on_click = lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
+ if choice == 'idoma'
+         dictionary = idoma_dict
          your_word = st.text_input('Enter your word')
          st.button('search', on_click = lambda: st.title(search_dictionary(your_word.lower(),dictionary)))
         
